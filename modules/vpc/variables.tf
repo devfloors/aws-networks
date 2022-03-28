@@ -6,7 +6,7 @@ variable "name" {
 variable "cidr_block" {
   description = "The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden."
   type        = string
-  default     = "0.0.0.0/16"
+  default     = "10.0.0.0/16"
 }
 
 variable "secondary_cidr_blocks" {
@@ -136,7 +136,7 @@ variable "resource_group_enabled" {
 variable "resource_group_name" {
   description = "The name of Resource Group. A Resource Group name can have a maximum of 127 characters, including letters, numbers, hyphens, dots, and underscores. The name cannot start with `AWS` or `aws`."
   type        = string
-  default     = ""
+  default     = "terraform-resource-group"
 }
 
 variable "resource_group_description" {
